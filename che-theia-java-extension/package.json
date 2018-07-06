@@ -9,10 +9,10 @@
     "src"
   ],
   "dependencies": {
-    "@theia/core": "latest",
-    "@theia/java": "latest",
-    "@theia/editor": "latest",
-    "@theia/languages": "latest"
+    "@theia/core": "0.3.12",
+    "@theia/java": "0.3.12",
+    "@theia/editor": "0.3.12",
+    "@theia/languages": "0.3.12"
   },
   "devDependencies": {
     "rimraf": "latest",
