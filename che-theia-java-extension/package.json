@@ -1,5 +1,5 @@
 {
-  "name": "che-theia-java-extension",
+  "name": "@eclipse-che/che-theia-java-extension",
   "keywords": [
     "theia-extension"
   ],
