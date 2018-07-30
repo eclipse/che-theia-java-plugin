@@ -15,8 +15,8 @@
     "@theia/languages": "0.3.12"
   },
   "devDependencies": {
-    "rimraf": "latest",
-    "typescript": "latest"
+    "rimraf": "2.6.2",
+    "typescript": "2.7.2"
   },
   "scripts": {
     "prepare": "yarn run clean && yarn run build",
