@@ -55,7 +55,7 @@ export interface FileStructureCommandParameters {
 @injectable()
 export class FileStructure implements QuickOpenModel, CommandContribution, KeybindingContribution, MenuContribution {
     /**
-     * Whether to hide .gitignored (and other ignored) files.
+     * Whether to hide members from super classes.
      */
     protected showInheritedMembers: boolean = false;
     /**
