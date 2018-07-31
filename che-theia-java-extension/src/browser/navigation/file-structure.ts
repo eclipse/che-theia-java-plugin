@@ -73,7 +73,7 @@ export class FileStructure implements QuickOpenModel, CommandContribution, Keybi
         id: 'java.command.file.structure',
         label: 'Java: Navigate File Structure'
     };
-    
+
     constructor(
         @inject(CommandRegistry) protected readonly commands: CommandRegistry,
         @inject(KeybindingRegistry) protected readonly keybindingRegistry: KeybindingRegistry,
@@ -81,10 +81,10 @@ export class FileStructure implements QuickOpenModel, CommandContribution, Keybi
         @inject(QuickOpenService) protected readonly quickOpenService: QuickOpenService,
         @inject(LanguageClientProvider) protected readonly languageClientProvider: LanguageClientProvider,
         @inject(EditorManager) protected readonly editorManager: EditorManager
-    ) { 
+    ) {
     }
 
-    async open () {
+    async open() {
         // Triggering the keyboard shortcut while the dialog is open toggles
         // showing the inherited members.
         if (this.isOpen) {
@@ -124,21 +124,21 @@ export class FileStructure implements QuickOpenModel, CommandContribution, Keybi
     private combineItems(members: Members[]) {
         for (const symbolInformation of members) {
             const info = symbolInformation.info as MemberItem;
-            if(!info){
+            if (!info) {
                 continue;
             }
             this.items.push(new MemberQuickOpenItem(info.name, info.kind, info.location, this.editorManager));
 
-            if(symbolInformation.children.length !==  0) {
+            if (symbolInformation.children.length !== 0) {
                 this.combineItems(symbolInformation.children);
             }
         }
     }
 
-     /**
-     * Get a string (suitable to show to the user) representing the keyboard
-     * shortcut used to open the quick file open menu.
-     */
+    /**
+    * Get a string (suitable to show to the user) representing the keyboard
+    * shortcut used to open the quick file open menu.
+    */
     private getKeyCommand(): string | undefined {
         const keyCommand = this.keybindingRegistry.getKeybindingsForCommand(this.command.id);
         if (keyCommand) {
@@ -149,13 +149,13 @@ export class FileStructure implements QuickOpenModel, CommandContribution, Keybi
 
         return undefined;
     }
-    
+
     isEnabled(): boolean {
         return !!this.editorManager.currentEditor;
     }
 
     isVisible(): boolean {
-        return !!this.editorManager.currentEditor;
+        return this.isEnabled();
     }
 
     registerKeybindings(keybindings: KeybindingRegistry): void {
@@ -181,7 +181,7 @@ export class FileStructure implements QuickOpenModel, CommandContribution, Keybi
 
     public onType(lookFor: string, acceptor: (items: QuickOpenItem[]) => void): void {
         this.currentLookFor = lookFor;
-        acceptor(this.items.filter((item)=> item.getLabel()!.toLocaleLowerCase().indexOf(lookFor.toLocaleLowerCase()) !== -1));
+        acceptor(this.items.filter((item) => item.getLabel()!.toLocaleLowerCase().indexOf(lookFor.toLocaleLowerCase()) !== -1));
     }
 
     private async doRequestToStructure(javaClient: ILanguageClient): Promise<Members[]> {
