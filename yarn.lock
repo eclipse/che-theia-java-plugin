@@ -112,19 +112,11 @@
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.7.0.tgz#9a06f4f137ee84d7df0460c1fdb1135ffa6c50fd"
 
-<<<<<<< HEAD
 "@theia/application-manager@^0.3.13":
   version "0.3.13"
   resolved "https://registry.yarnpkg.com/@theia/application-manager/-/application-manager-0.3.13.tgz#06e5aabd69192355941a92b3b83d30c7b403077c"
   dependencies:
     "@theia/application-package" "^0.3.13"
-=======
-"@theia/application-manager@^0.3.12":
-  version "0.3.12"
-  resolved "https://registry.yarnpkg.com/@theia/application-manager/-/application-manager-0.3.12.tgz#62ecd64f77995f694184675ec02961a1213be5a2"
-  dependencies:
-    "@theia/application-package" "^0.3.12"
->>>>>>> Added implementers
     bunyan "^1.8.10"
     circular-dependency-plugin "^4.0.0"
     copy-webpack-plugin "^4.5.0"
@@ -143,15 +135,9 @@
     webpack-cli "2.0.12"
     worker-loader "^1.1.1"
 
-<<<<<<< HEAD
 "@theia/application-package@^0.3.13":
   version "0.3.13"
   resolved "https://registry.yarnpkg.com/@theia/application-package/-/application-package-0.3.13.tgz#ee989d08c69bbacc1468116277d4e0a8b0c9cefc"
-=======
-"@theia/application-package@^0.3.12":
-  version "0.3.12"
-  resolved "https://registry.yarnpkg.com/@theia/application-package/-/application-package-0.3.12.tgz#0008e573ded5a20da7d27a1b504fa63254b8075e"
->>>>>>> Added implementers
   dependencies:
     "@types/fs-extra" "^4.0.2"
     "@types/request" "^2.0.3"
@@ -163,7 +149,6 @@
     semver "^5.4.1"
     write-json-file "^2.2.0"
 
-<<<<<<< HEAD
 "@theia/callhierarchy@^0.3.13":
   version "0.3.13"
   resolved "https://registry.yarnpkg.com/@theia/callhierarchy/-/callhierarchy-0.3.13.tgz#210477db08fbe2ff8e9aef0441111049712b2816"
@@ -186,30 +171,6 @@
   dependencies:
     "@phosphor/widgets" "^1.5.0"
     "@theia/application-package" "^0.3.13"
-=======
-"@theia/callhierarchy@^0.3.12":
-  version "0.3.12"
-  resolved "https://registry.yarnpkg.com/@theia/callhierarchy/-/callhierarchy-0.3.12.tgz#00e4c4f7095ab1268fd9ce9e0bf36b8da8d720c6"
-  dependencies:
-    "@theia/core" "^0.3.12"
-    "@theia/editor" "^0.3.12"
-    "@theia/languages" "^0.3.12"
-    "@theia/monaco" "^0.3.12"
-    ts-md5 "^1.2.2"
-
-"@theia/cli@latest":
-  version "0.3.12"
-  resolved "https://registry.yarnpkg.com/@theia/cli/-/cli-0.3.12.tgz#73e9b83a9524b691ae60aad6a4dfb7dbae4fb359"
-  dependencies:
-    "@theia/application-manager" "^0.3.12"
-
-"@theia/core@0.3.12", "@theia/core@^0.3.12", "@theia/core@latest":
-  version "0.3.12"
-  resolved "https://registry.yarnpkg.com/@theia/core/-/core-0.3.12.tgz#967fa1c049068264156161f16959736a3d5e0fb0"
-  dependencies:
-    "@phosphor/widgets" "^1.5.0"
-    "@theia/application-package" "^0.3.12"
->>>>>>> Added implementers
     "@types/body-parser" "^1.16.4"
     "@types/bunyan" "^1.8.0"
     "@types/express" "^4.16.0"
@@ -217,10 +178,7 @@
     "@types/lodash.throttle" "^4.1.3"
     "@types/react" "^16.4.1"
     "@types/react-dom" "^16.0.6"
-<<<<<<< HEAD
     "@types/react-virtualized" "^9.18.3"
-=======
->>>>>>> Added implementers
     "@types/route-parser" "^0.1.1"
     "@types/ws" "^3.0.2"
     "@types/yargs" "^8.0.2"
@@ -237,10 +195,7 @@
     perfect-scrollbar "^1.3.0"
     react "^16.4.1"
     react-dom "^16.4.1"
-<<<<<<< HEAD
     react-virtualized "^9.20.0"
-=======
->>>>>>> Added implementers
     reconnecting-websocket "^3.0.7"
     reflect-metadata "^0.1.10"
     route-parser "^0.0.5"
@@ -251,7 +206,6 @@
     ws "^3.0.0"
     yargs "^9.0.1"
 
-<<<<<<< HEAD
 "@theia/editor@0.3.13", "@theia/editor@^0.3.13":
   version "0.3.13"
   resolved "https://registry.yarnpkg.com/@theia/editor/-/editor-0.3.13.tgz#0f33e6be4efad21d19c00614bb708633faeb5a23"
@@ -275,21 +229,6 @@
   resolved "https://registry.yarnpkg.com/@theia/filesystem/-/filesystem-0.3.13.tgz#346a6d9c6e5ba67c76ac9d0d551ab42dc0dadd7b"
   dependencies:
     "@theia/core" "^0.3.13"
-=======
-"@theia/editor@0.3.12", "@theia/editor@^0.3.12", "@theia/editor@latest":
-  version "0.3.12"
-  resolved "https://registry.yarnpkg.com/@theia/editor/-/editor-0.3.12.tgz#bbd3ac3e4a39053a053f1fd28c9c3ed7fdeb7392"
-  dependencies:
-    "@theia/core" "^0.3.12"
-    "@theia/languages" "^0.3.12"
-    "@theia/variable-resolver" "^0.3.12"
-
-"@theia/filesystem@^0.3.12", "@theia/filesystem@latest":
-  version "0.3.12"
-  resolved "https://registry.yarnpkg.com/@theia/filesystem/-/filesystem-0.3.12.tgz#d8355dc30bfaf50dd0ceb450976f92b1b33694dc"
-  dependencies:
-    "@theia/core" "^0.3.12"
->>>>>>> Added implementers
     "@types/base64-js" "^1.2.5"
     "@types/body-parser" "^1.17.0"
     "@types/fs-extra" "^4.0.2"
@@ -311,7 +250,6 @@
     uuid "^3.2.1"
     zip-dir "^1.0.2"
 
-<<<<<<< HEAD
 "@theia/java@0.3.13":
   version "0.3.13"
   resolved "https://registry.yarnpkg.com/@theia/java/-/java-0.3.13.tgz#66afedf12f8e227f520500677c9f945b57413ec0"
@@ -320,23 +258,12 @@
     "@theia/editor" "^0.3.13"
     "@theia/languages" "^0.3.13"
     "@theia/monaco" "^0.3.13"
-=======
-"@theia/java@0.3.12", "@theia/java@latest":
-  version "0.3.12"
-  resolved "https://registry.yarnpkg.com/@theia/java/-/java-0.3.12.tgz#7d596d89766744dc6585bcf3b9ed89283b5ad965"
-  dependencies:
-    "@theia/core" "^0.3.12"
-    "@theia/editor" "^0.3.12"
-    "@theia/languages" "^0.3.12"
-    "@theia/monaco" "^0.3.12"
->>>>>>> Added implementers
     "@types/glob" "^5.0.30"
     "@types/tar" "4.0.0"
     glob "^7.1.2"
     mkdirp "^0.5.0"
     tar "^4.0.0"
 
-<<<<<<< HEAD
 "@theia/languages@0.3.13", "@theia/languages@^0.3.13":
   version "0.3.13"
   resolved "https://registry.yarnpkg.com/@theia/languages/-/languages-0.3.13.tgz#f7e82b28df5fe0106dd6f4d0d60bdf7021793b40"
@@ -374,61 +301,9 @@
     "@theia/markers" "^0.3.13"
     "@theia/outline-view" "^0.3.13"
     "@theia/workspace" "^0.3.13"
-=======
-"@theia/java@file:../theia/packages/java":
-  version "0.3.12"
-  dependencies:
-    "@theia/core" "^0.3.12"
-    "@theia/editor" "^0.3.12"
-    "@theia/languages" "^0.3.12"
-    "@theia/monaco" "^0.3.12"
-    "@types/glob" "^5.0.30"
-    "@types/tar" "4.0.0"
-    glob "^7.1.2"
-    mkdirp "^0.5.0"
-    tar "^4.0.0"
-
-"@theia/languages@0.3.12", "@theia/languages@^0.3.12", "@theia/languages@latest":
-  version "0.3.12"
-  resolved "https://registry.yarnpkg.com/@theia/languages/-/languages-0.3.12.tgz#b2d4990d6e5d4e275a246da54491e0ee4b3d1cb9"
-  dependencies:
-    "@theia/core" "^0.3.12"
-    "@theia/output" "^0.3.12"
-    "@theia/process" "^0.3.12"
-    vscode-base-languageclient "^0.0.1-alpha.5"
-    vscode-languageserver-protocol "^3.6.0"
-
-"@theia/markers@^0.3.12", "@theia/markers@latest":
-  version "0.3.12"
-  resolved "https://registry.yarnpkg.com/@theia/markers/-/markers-0.3.12.tgz#a08c001dfc193a9dc79ceeca0fdd8928a579b133"
-  dependencies:
-    "@theia/core" "^0.3.12"
-    "@theia/filesystem" "^0.3.12"
-    "@theia/navigator" "^0.3.12"
-    "@theia/workspace" "^0.3.12"
-
-"@theia/messages@latest":
-  version "0.3.12"
-  resolved "https://registry.yarnpkg.com/@theia/messages/-/messages-0.3.12.tgz#64715d2430bb84803a588483ccd5dab603dd245b"
-  dependencies:
-    "@theia/core" "^0.3.12"
-
-"@theia/monaco@^0.3.12", "@theia/monaco@latest":
-  version "0.3.12"
-  resolved "https://registry.yarnpkg.com/@theia/monaco/-/monaco-0.3.12.tgz#46c221d8021dd06eddef835d6c4957f841ed0ccd"
-  dependencies:
-    "@theia/core" "^0.3.12"
-    "@theia/editor" "^0.3.12"
-    "@theia/filesystem" "^0.3.12"
-    "@theia/languages" "^0.3.12"
-    "@theia/markers" "^0.3.12"
-    "@theia/outline-view" "^0.3.12"
-    "@theia/workspace" "^0.3.12"
->>>>>>> Added implementers
     monaco-css "^2.0.1"
     monaco-html "^2.0.2"
     monaco-languageclient "0.6.3"
-<<<<<<< HEAD
     monaco-textmate "^3.0.0"
     onigasm "^2.1.0"
 
@@ -439,23 +314,8 @@
     "@theia/core" "^0.3.13"
     "@theia/filesystem" "^0.3.13"
     "@theia/workspace" "^0.3.13"
-=======
-    monaco-languages "^1.0.4"
-    monaco-textmate "^3.0.0"
-    onigasm "^2.1.0"
-
-"@theia/navigator@^0.3.12", "@theia/navigator@latest":
-  version "0.3.12"
-  resolved "https://registry.yarnpkg.com/@theia/navigator/-/navigator-0.3.12.tgz#be9d0f6daba9d9b4d20c9afd1816b4bbea5671c4"
-  dependencies:
-    "@theia/core" "^0.3.12"
-    "@theia/filesystem" "^0.3.12"
-    "@theia/workspace" "^0.3.12"
-    "@types/throttle-debounce" "^1.0.0"
->>>>>>> Added implementers
     fuzzy "^0.1.3"
 
-<<<<<<< HEAD
 "@theia/outline-view@^0.3.13":
   version "0.3.13"
   resolved "https://registry.yarnpkg.com/@theia/outline-view/-/outline-view-0.3.13.tgz#19f39f967923470ec6c3410f145e864fee38dc4c"
@@ -476,33 +336,10 @@
     "@theia/filesystem" "^0.3.13"
     "@theia/userstorage" "^0.3.13"
     "@theia/workspace" "^0.3.13"
-=======
-"@theia/outline-view@^0.3.12":
-  version "0.3.12"
-  resolved "https://registry.yarnpkg.com/@theia/outline-view/-/outline-view-0.3.12.tgz#b8c3b2ced0a8459e79ceca77167ff51ad9fb60f5"
-  dependencies:
-    "@theia/core" "^0.3.12"
-
-"@theia/output@^0.3.12":
-  version "0.3.12"
-  resolved "https://registry.yarnpkg.com/@theia/output/-/output-0.3.12.tgz#394722b47a6892d1a54cf1bea396a8a040999a33"
-  dependencies:
-    "@theia/core" "^0.3.12"
-
-"@theia/preferences@latest":
-  version "0.3.12"
-  resolved "https://registry.yarnpkg.com/@theia/preferences/-/preferences-0.3.12.tgz#b286bf78fb537e1735e16231ef187f9bee84c768"
-  dependencies:
-    "@theia/core" "^0.3.12"
-    "@theia/filesystem" "^0.3.12"
-    "@theia/userstorage" "^0.3.12"
-    "@theia/workspace" "^0.3.12"
->>>>>>> Added implementers
     "@types/fs-extra" "^4.0.2"
     fs-extra "^4.0.2"
     jsonc-parser "^1.0.1"
 
-<<<<<<< HEAD
 "@theia/process@0.3.13", "@theia/process@^0.3.13":
   version "0.3.13"
   resolved "https://registry.yarnpkg.com/@theia/process/-/process-0.3.13.tgz#a3baa3b5e57d86677caeafa556f6c0b682eb9e4c"
@@ -551,56 +388,6 @@
     "@theia/core" "^0.3.13"
     "@theia/filesystem" "^0.3.13"
     "@theia/variable-resolver" "^0.3.13"
-=======
-"@theia/process@^0.3.12", "@theia/process@latest":
-  version "0.3.12"
-  resolved "https://registry.yarnpkg.com/@theia/process/-/process-0.3.12.tgz#8cebf1c2a501ae7f3950103bd6592022e64b0c5b"
-  dependencies:
-    "@theia/core" "^0.3.12"
-    node-pty "^0.7.0"
-    string-argv "0.0.2"
-
-"@theia/terminal@latest":
-  version "0.3.12"
-  resolved "https://registry.yarnpkg.com/@theia/terminal/-/terminal-0.3.12.tgz#94569a6c1cb8b5c2c640cd7f140ff95c05cdb21f"
-  dependencies:
-    "@theia/core" "^0.3.12"
-    "@theia/filesystem" "^0.3.12"
-    "@theia/process" "^0.3.12"
-    "@theia/workspace" "^0.3.12"
-    xterm "^3.0.1"
-
-"@theia/typescript@latest":
-  version "0.3.12"
-  resolved "https://registry.yarnpkg.com/@theia/typescript/-/typescript-0.3.12.tgz#609df2e85f67752fd94ba203ea4b1ee07c440c35"
-  dependencies:
-    "@theia/callhierarchy" "^0.3.12"
-    "@theia/core" "^0.3.12"
-    "@theia/languages" "^0.3.12"
-    "@theia/monaco" "^0.3.12"
-    typescript-language-server "^0.1.14"
-
-"@theia/userstorage@^0.3.12":
-  version "0.3.12"
-  resolved "https://registry.yarnpkg.com/@theia/userstorage/-/userstorage-0.3.12.tgz#08fc2ab781c993ba408caf2520f92f63906b2652"
-  dependencies:
-    "@theia/core" "^0.3.12"
-    "@theia/filesystem" "^0.3.12"
-
-"@theia/variable-resolver@^0.3.12":
-  version "0.3.12"
-  resolved "https://registry.yarnpkg.com/@theia/variable-resolver/-/variable-resolver-0.3.12.tgz#d2830dba0776da9e7b1965bc33d519d6d2f397af"
-  dependencies:
-    "@theia/core" "^0.3.12"
-
-"@theia/workspace@^0.3.12", "@theia/workspace@latest":
-  version "0.3.12"
-  resolved "https://registry.yarnpkg.com/@theia/workspace/-/workspace-0.3.12.tgz#fc02e0867c025551c21ebc00c4e9d8228c0e308b"
-  dependencies:
-    "@theia/core" "^0.3.12"
-    "@theia/filesystem" "^0.3.12"
-    "@theia/variable-resolver" "^0.3.12"
->>>>>>> Added implementers
     "@types/fs-extra" "^4.0.2"
     fs-extra "^4.0.2"
     valid-filename "^2.0.1"
@@ -686,13 +473,8 @@
     "@types/lodash" "*"
 
 "@types/lodash@*":
-<<<<<<< HEAD
   version "4.14.115"
   resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.115.tgz#54d171b2ce12c058742443b5f6754760f701b8f9"
-=======
-  version "4.14.110"
-  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.110.tgz#fb07498f84152947f30ea09d89207ca07123461e"
->>>>>>> Added implementers
 
 "@types/mime-types@^2.1.0":
   version "2.1.0"
@@ -707,7 +489,6 @@
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.3.tgz#3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d"
 
 "@types/node@*":
-<<<<<<< HEAD
   version "10.5.4"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.5.4.tgz#6eccc158504357d1da91434d75e86acde94bb10b"
 
@@ -720,14 +501,6 @@
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.5.4.tgz#9e6199bad131786e24c2baa2a82705a02139fbf8"
   dependencies:
     "@types/react" "*"
-=======
-  version "10.5.1"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.5.1.tgz#d578446f4abff5c0b49ade9b4e5274f6badaadfc"
-
-"@types/node@^8.0.24":
-  version "8.10.20"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.10.20.tgz#fe674ea52e13950ab10954433a7824438aabbcac"
->>>>>>> Added implementers
 
 "@types/range-parser@*":
   version "1.2.2"
@@ -740,7 +513,6 @@
     "@types/node" "*"
     "@types/react" "*"
 
-<<<<<<< HEAD
 "@types/react-virtualized@^9.18.3":
   version "9.18.5"
   resolved "https://registry.yarnpkg.com/@types/react-virtualized/-/react-virtualized-9.18.5.tgz#8c6b4e739e2fc4a601dd3e5e114dd0deeba56cc7"
@@ -751,11 +523,6 @@
 "@types/react@*", "@types/react@^16.4.1":
   version "16.4.7"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.4.7.tgz#f33f6d759a7e1833befa15224d68942d178a5a3f"
-=======
-"@types/react@*", "@types/react@^16.4.1":
-  version "16.4.5"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.4.5.tgz#98a00fdd2c512ed5d7399d3f2660ce9d6152bce6"
->>>>>>> Added implementers
   dependencies:
     csstype "^2.2.0"
 
@@ -801,13 +568,6 @@
   resolved "https://registry.yarnpkg.com/@types/tar/-/tar-4.0.0.tgz#e3239d969eeb693a012200613860d0eb871c94f0"
   dependencies:
     "@types/node" "*"
-<<<<<<< HEAD
-=======
-
-"@types/throttle-debounce@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@types/throttle-debounce/-/throttle-debounce-1.0.0.tgz#4a871d80fed83496916c8598abb361a2d2277d6f"
->>>>>>> Added implementers
 
 "@types/touch@0.0.1":
   version "0.0.1"
@@ -837,7 +597,6 @@
   version "8.0.3"
   resolved "https://registry.yarnpkg.com/@types/yargs/-/yargs-8.0.3.tgz#6f0ad77792762fc69d209716dbab3201dcba56fb"
 
-<<<<<<< HEAD
 "@webassemblyjs/ast@1.5.13":
   version "1.5.13"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.5.13.tgz#81155a570bd5803a30ec31436bc2c9c0ede38f25"
@@ -875,50 +634,10 @@
 "@webassemblyjs/helper-module-context@1.5.13":
   version "1.5.13"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/helper-module-context/-/helper-module-context-1.5.13.tgz#dc29ddfb51ed657655286f94a5d72d8a489147c5"
-=======
-"@webassemblyjs/ast@1.5.12":
-  version "1.5.12"
-  resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.5.12.tgz#a9acbcb3f25333c4edfa1fdf3186b1ccf64e6664"
-  dependencies:
-    "@webassemblyjs/helper-module-context" "1.5.12"
-    "@webassemblyjs/helper-wasm-bytecode" "1.5.12"
-    "@webassemblyjs/wast-parser" "1.5.12"
-    debug "^3.1.0"
-    mamacro "^0.0.3"
-
-"@webassemblyjs/floating-point-hex-parser@1.5.12":
-  version "1.5.12"
-  resolved "https://registry.yarnpkg.com/@webassemblyjs/floating-point-hex-parser/-/floating-point-hex-parser-1.5.12.tgz#0f36044ffe9652468ce7ae5a08716a4eeff9cd9c"
-
-"@webassemblyjs/helper-api-error@1.5.12":
-  version "1.5.12"
-  resolved "https://registry.yarnpkg.com/@webassemblyjs/helper-api-error/-/helper-api-error-1.5.12.tgz#05466833ff2f9d8953a1a327746e1d112ea62aaf"
-
-"@webassemblyjs/helper-buffer@1.5.12":
-  version "1.5.12"
-  resolved "https://registry.yarnpkg.com/@webassemblyjs/helper-buffer/-/helper-buffer-1.5.12.tgz#1f0de5aaabefef89aec314f7f970009cd159c73d"
-  dependencies:
-    debug "^3.1.0"
-
-"@webassemblyjs/helper-code-frame@1.5.12":
-  version "1.5.12"
-  resolved "https://registry.yarnpkg.com/@webassemblyjs/helper-code-frame/-/helper-code-frame-1.5.12.tgz#3cdc1953093760d1c0f0caf745ccd62bdb6627c7"
-  dependencies:
-    "@webassemblyjs/wast-printer" "1.5.12"
-
-"@webassemblyjs/helper-fsm@1.5.12":
-  version "1.5.12"
-  resolved "https://registry.yarnpkg.com/@webassemblyjs/helper-fsm/-/helper-fsm-1.5.12.tgz#6bc1442b037f8e30f2e57b987cee5c806dd15027"
-
-"@webassemblyjs/helper-module-context@1.5.12":
-  version "1.5.12"
-  resolved "https://registry.yarnpkg.com/@webassemblyjs/helper-module-context/-/helper-module-context-1.5.12.tgz#b5588ca78b33b8a0da75f9ab8c769a3707baa861"
->>>>>>> Added implementers
   dependencies:
     debug "^3.1.0"
     mamacro "^0.0.3"
 
-<<<<<<< HEAD
 "@webassemblyjs/helper-wasm-bytecode@1.5.13":
   version "1.5.13"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/helper-wasm-bytecode/-/helper-wasm-bytecode-1.5.13.tgz#03245817f0a762382e61733146f5773def15a747"
@@ -942,35 +661,9 @@
 "@webassemblyjs/leb128@1.5.13":
   version "1.5.13"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/leb128/-/leb128-1.5.13.tgz#ab52ebab9cec283c1c1897ac1da833a04a3f4cee"
-=======
-"@webassemblyjs/helper-wasm-bytecode@1.5.12":
-  version "1.5.12"
-  resolved "https://registry.yarnpkg.com/@webassemblyjs/helper-wasm-bytecode/-/helper-wasm-bytecode-1.5.12.tgz#d12a3859db882a448891a866a05d0be63785b616"
-
-"@webassemblyjs/helper-wasm-section@1.5.12":
-  version "1.5.12"
-  resolved "https://registry.yarnpkg.com/@webassemblyjs/helper-wasm-section/-/helper-wasm-section-1.5.12.tgz#ff9fe1507d368ad437e7969d25e8c1693dac1884"
-  dependencies:
-    "@webassemblyjs/ast" "1.5.12"
-    "@webassemblyjs/helper-buffer" "1.5.12"
-    "@webassemblyjs/helper-wasm-bytecode" "1.5.12"
-    "@webassemblyjs/wasm-gen" "1.5.12"
-    debug "^3.1.0"
-
-"@webassemblyjs/ieee754@1.5.12":
-  version "1.5.12"
-  resolved "https://registry.yarnpkg.com/@webassemblyjs/ieee754/-/ieee754-1.5.12.tgz#ee9574bc558888f13097ce3e7900dff234ea19a4"
-  dependencies:
-    ieee754 "^1.1.11"
-
-"@webassemblyjs/leb128@1.5.12":
-  version "1.5.12"
-  resolved "https://registry.yarnpkg.com/@webassemblyjs/leb128/-/leb128-1.5.12.tgz#0308eec652765ee567d8a5fa108b4f0b25b458e1"
->>>>>>> Added implementers
   dependencies:
     long "4.0.0"
 
-<<<<<<< HEAD
 "@webassemblyjs/utf8@1.5.13":
   version "1.5.13"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/utf8/-/utf8-1.5.13.tgz#6b53d2cd861cf94fa99c1f12779dde692fbc2469"
@@ -1038,75 +731,6 @@
   dependencies:
     "@webassemblyjs/ast" "1.5.13"
     "@webassemblyjs/wast-parser" "1.5.13"
-=======
-"@webassemblyjs/utf8@1.5.12":
-  version "1.5.12"
-  resolved "https://registry.yarnpkg.com/@webassemblyjs/utf8/-/utf8-1.5.12.tgz#d5916222ef314bf60d6806ed5ac045989bfd92ce"
-
-"@webassemblyjs/wasm-edit@1.5.12":
-  version "1.5.12"
-  resolved "https://registry.yarnpkg.com/@webassemblyjs/wasm-edit/-/wasm-edit-1.5.12.tgz#821c9358e644a166f2c910e5af1b46ce795a17aa"
-  dependencies:
-    "@webassemblyjs/ast" "1.5.12"
-    "@webassemblyjs/helper-buffer" "1.5.12"
-    "@webassemblyjs/helper-wasm-bytecode" "1.5.12"
-    "@webassemblyjs/helper-wasm-section" "1.5.12"
-    "@webassemblyjs/wasm-gen" "1.5.12"
-    "@webassemblyjs/wasm-opt" "1.5.12"
-    "@webassemblyjs/wasm-parser" "1.5.12"
-    "@webassemblyjs/wast-printer" "1.5.12"
-    debug "^3.1.0"
-
-"@webassemblyjs/wasm-gen@1.5.12":
-  version "1.5.12"
-  resolved "https://registry.yarnpkg.com/@webassemblyjs/wasm-gen/-/wasm-gen-1.5.12.tgz#0b7ccfdb93dab902cc0251014e2e18bae3139bcb"
-  dependencies:
-    "@webassemblyjs/ast" "1.5.12"
-    "@webassemblyjs/helper-wasm-bytecode" "1.5.12"
-    "@webassemblyjs/ieee754" "1.5.12"
-    "@webassemblyjs/leb128" "1.5.12"
-    "@webassemblyjs/utf8" "1.5.12"
-
-"@webassemblyjs/wasm-opt@1.5.12":
-  version "1.5.12"
-  resolved "https://registry.yarnpkg.com/@webassemblyjs/wasm-opt/-/wasm-opt-1.5.12.tgz#bd758a8bc670f585ff1ae85f84095a9e0229cbc9"
-  dependencies:
-    "@webassemblyjs/ast" "1.5.12"
-    "@webassemblyjs/helper-buffer" "1.5.12"
-    "@webassemblyjs/wasm-gen" "1.5.12"
-    "@webassemblyjs/wasm-parser" "1.5.12"
-    debug "^3.1.0"
-
-"@webassemblyjs/wasm-parser@1.5.12":
-  version "1.5.12"
-  resolved "https://registry.yarnpkg.com/@webassemblyjs/wasm-parser/-/wasm-parser-1.5.12.tgz#7b10b4388ecf98bd7a22e702aa62ec2f46d0c75e"
-  dependencies:
-    "@webassemblyjs/ast" "1.5.12"
-    "@webassemblyjs/helper-api-error" "1.5.12"
-    "@webassemblyjs/helper-wasm-bytecode" "1.5.12"
-    "@webassemblyjs/ieee754" "1.5.12"
-    "@webassemblyjs/leb128" "1.5.12"
-    "@webassemblyjs/utf8" "1.5.12"
-
-"@webassemblyjs/wast-parser@1.5.12":
-  version "1.5.12"
-  resolved "https://registry.yarnpkg.com/@webassemblyjs/wast-parser/-/wast-parser-1.5.12.tgz#9cf5ae600ecae0640437b5d4de5dd6b6088d0d8b"
-  dependencies:
-    "@webassemblyjs/ast" "1.5.12"
-    "@webassemblyjs/floating-point-hex-parser" "1.5.12"
-    "@webassemblyjs/helper-api-error" "1.5.12"
-    "@webassemblyjs/helper-code-frame" "1.5.12"
-    "@webassemblyjs/helper-fsm" "1.5.12"
-    long "^3.2.0"
-    mamacro "^0.0.3"
-
-"@webassemblyjs/wast-printer@1.5.12":
-  version "1.5.12"
-  resolved "https://registry.yarnpkg.com/@webassemblyjs/wast-printer/-/wast-printer-1.5.12.tgz#563ca4d01b22d21640b2463dc5e3d7f7d9dac520"
-  dependencies:
-    "@webassemblyjs/ast" "1.5.12"
-    "@webassemblyjs/wast-parser" "1.5.12"
->>>>>>> Added implementers
     long "^3.2.0"
 
 JSONStream@^1.0.4:
@@ -1162,13 +786,8 @@ ajv@^5.1.0, ajv@^5.2.2:
     json-schema-traverse "^0.3.0"
 
 ajv@^6.1.0:
-<<<<<<< HEAD
   version "6.5.2"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.5.2.tgz#678495f9b82f7cca6be248dd92f59bff5e1f4360"
-=======
-  version "6.5.1"
-  resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.5.1.tgz#88ebc1263c7133937d108b80c5572e64e1d9322d"
->>>>>>> Added implementers
   dependencies:
     fast-deep-equal "^2.0.1"
     fast-json-stable-stringify "^2.0.0"
@@ -2352,13 +1971,8 @@ caniuse-api@^1.5.2:
     lodash.uniq "^4.5.0"
 
 caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
-<<<<<<< HEAD
   version "1.0.30000872"
   resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000872.tgz#3f6e53b63d373768bf99e896133d66ef89c49999"
-=======
-  version "1.0.30000861"
-  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000861.tgz#6f27840a130c10c0b1e00fab7729c1faf8f4ccd3"
->>>>>>> Added implementers
 
 capture-stack-trace@^1.0.0:
   version "1.0.0"
@@ -2609,19 +2223,11 @@ color-convert@^1.3.0, color-convert@^1.9.0:
   resolved "https://registry.yarnpkg.com/color-convert/-/color-convert-1.9.2.tgz#49881b8fba67df12a96bdf3f56c0aab9e7913147"
   dependencies:
     color-name "1.1.1"
-<<<<<<< HEAD
 
 color-name@1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/color-name/-/color-name-1.1.1.tgz#4b1415304cf50028ea81643643bd82ea05803689"
 
-=======
-
-color-name@1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/color-name/-/color-name-1.1.1.tgz#4b1415304cf50028ea81643643bd82ea05803689"
-
->>>>>>> Added implementers
 color-name@^1.0.0:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/color-name/-/color-name-1.1.3.tgz#a7d0558bd89c42f795dd42328f740831ca53bc25"
@@ -3134,13 +2740,8 @@ csso@~2.3.1:
     source-map "^0.5.3"
 
 csstype@^2.2.0:
-<<<<<<< HEAD
   version "2.5.6"
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.5.6.tgz#2ae1db2319642d8b80a668d2d025c6196071e788"
-=======
-  version "2.5.5"
-  resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.5.5.tgz#4125484a3d42189a863943f23b9e4b80fedfa106"
->>>>>>> Added implementers
 
 currently-unhandled@^0.4.1:
   version "0.4.1"
@@ -3421,13 +3022,8 @@ electron-rebuild@^1.5.11:
     yargs "^7.0.2"
 
 electron-to-chromium@^1.2.7:
-<<<<<<< HEAD
   version "1.3.52"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.52.tgz#d2d9f1270ba4a3b967b831c40ef71fb4d9ab5ce0"
-=======
-  version "1.3.50"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.50.tgz#7438b76f92b41b919f3fbdd350fbd0757dacddf7"
->>>>>>> Added implementers
 
 electron@1.8.2-beta.5:
   version "1.8.2-beta.5"
@@ -3884,13 +3480,8 @@ flatten@^1.0.2:
   resolved "https://registry.yarnpkg.com/flatten/-/flatten-1.0.2.tgz#dae46a9d78fbe25292258cc1e780a41d95c03782"
 
 flow-parser@^0.*:
-<<<<<<< HEAD
   version "0.76.0"
   resolved "https://registry.yarnpkg.com/flow-parser/-/flow-parser-0.76.0.tgz#f7d4c4d26df74805c3a0babd5d8ea4c2cd57190b"
-=======
-  version "0.75.0"
-  resolved "https://registry.yarnpkg.com/flow-parser/-/flow-parser-0.75.0.tgz#9a1891c48051c73017b6b5cc07b3681fda3fdfb0"
->>>>>>> Added implementers
 
 flush-write-stream@^1.0.0:
   version "1.0.3"
@@ -4434,13 +4025,8 @@ hash-base@^3.0.0:
     safe-buffer "^5.0.1"
 
 hash.js@^1.0.0, hash.js@^1.0.3:
-<<<<<<< HEAD
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/hash.js/-/hash.js-1.1.5.tgz#e38ab4b85dfb1e0c40fe9265c0e9b54854c23812"
-=======
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/hash.js/-/hash.js-1.1.4.tgz#8b50e1f35d51bd01e5ed9ece4dbe3549ccfa0a3c"
->>>>>>> Added implementers
   dependencies:
     inherits "^2.0.3"
     minimalistic-assert "^1.0.1"
@@ -4484,13 +4070,8 @@ homedir-polyfill@^1.0.1:
     parse-passwd "^1.0.0"
 
 hosted-git-info@^2.1.4, hosted-git-info@^2.5.0:
-<<<<<<< HEAD
   version "2.7.1"
   resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.7.1.tgz#97f236977bd6e125408930ff6de3eec6281ec047"
-=======
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.6.1.tgz#6e4cee78b01bb849dcf93527708c69fdbee410df"
->>>>>>> Added implementers
 
 html-comment-regex@^1.1.0:
   version "1.1.1"
@@ -5518,15 +5099,9 @@ longest@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/longest/-/longest-1.0.1.tgz#30a0b2da38f73770e8294a0d22e6625ed77d0097"
 
-<<<<<<< HEAD
 loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.3.0, loose-envify@^1.3.1:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
-=======
-loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.3.1:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.3.1.tgz#d1a8ad33fa9ce0e713d65fdd0ac8b748d478c848"
->>>>>>> Added implementers
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
 
@@ -5725,13 +5300,8 @@ mime-db@~1.35.0:
   resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.35.0.tgz#0569d657466491283709663ad379a99b90d9ab47"
 
 mime-types@^2.1.12, mime-types@^2.1.18, mime-types@~2.1.17, mime-types@~2.1.18, mime-types@~2.1.7:
-<<<<<<< HEAD
   version "2.1.19"
   resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.19.tgz#71e464537a7ef81c15f2db9d97e913fc0ff606f0"
-=======
-  version "2.1.18"
-  resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.18.tgz#6f323f60a83d11146f831ff11fd66e2fe5503bb8"
->>>>>>> Added implementers
   dependencies:
     mime-db "~1.35.0"
 
@@ -5862,13 +5432,6 @@ monaco-languageclient@0.6.3:
     vscode-base-languageclient "^0.0.1-alpha.5"
     vscode-languageserver-types "^3.7.0"
 
-<<<<<<< HEAD
-=======
-monaco-languages@^1.0.4:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/monaco-languages/-/monaco-languages-1.3.1.tgz#758bfc2b46bd20ef8d58c02512eb3ca2ac76d742"
-
->>>>>>> Added implementers
 monaco-textmate@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/monaco-textmate/-/monaco-textmate-3.0.0.tgz#abfbce7d7ff000954ae3206e512f325db6e7b8a8"
@@ -6026,13 +5589,8 @@ node-libs-browser@^2.0.0:
     vm-browserify "0.0.4"
 
 node-pre-gyp@^0.10.0:
-<<<<<<< HEAD
   version "0.10.3"
   resolved "https://registry.yarnpkg.com/node-pre-gyp/-/node-pre-gyp-0.10.3.tgz#3070040716afdc778747b61b6887bf78880b80fc"
-=======
-  version "0.10.2"
-  resolved "https://registry.yarnpkg.com/node-pre-gyp/-/node-pre-gyp-0.10.2.tgz#e8945c20ef6795a20aac2b44f036eb13cf5146e3"
->>>>>>> Added implementers
   dependencies:
     detect-libc "^1.0.2"
     mkdirp "^0.5.1"
@@ -6045,11 +5603,7 @@ node-pre-gyp@^0.10.0:
     semver "^5.3.0"
     tar "^4"
 
-<<<<<<< HEAD
 node-pty@0.7.6:
-=======
-node-pty@^0.7.0:
->>>>>>> Added implementers
   version "0.7.6"
   resolved "https://registry.yarnpkg.com/node-pty/-/node-pty-0.7.6.tgz#bff6148c9c5836ca7e73c7aaaec067dcbdac2f7b"
   dependencies:
@@ -6848,13 +6402,8 @@ preserve@^0.2.0:
   resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
 
 prettier@^1.5.3:
-<<<<<<< HEAD
   version "1.14.0"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.14.0.tgz#847c235522035fd988100f1f43cf20a7d24f9372"
-=======
-  version "1.13.7"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.13.7.tgz#850f3b8af784a49a6ea2d2eaa7ed1428a34b7281"
->>>>>>> Added implementers
 
 pretty-bytes@^1.0.2:
   version "1.0.4"
@@ -7072,7 +6621,6 @@ react-dom@^16.4.1:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
-<<<<<<< HEAD
 react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
@@ -7088,8 +6636,6 @@ react-virtualized@^9.20.0:
     prop-types "^15.6.0"
     react-lifecycles-compat "^3.0.4"
 
-=======
->>>>>>> Added implementers
 react@^16.4.1:
   version "16.4.1"
   resolved "https://registry.yarnpkg.com/react/-/react-16.4.1.tgz#de51ba5764b5dbcd1f9079037b862bd26b82fe32"
@@ -8190,13 +7736,6 @@ textextensions@2:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/textextensions/-/textextensions-2.2.0.tgz#38ac676151285b658654581987a0ce1a4490d286"
 
-<<<<<<< HEAD
-=======
-throttle-debounce@^1.0.1:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/throttle-debounce/-/throttle-debounce-1.1.0.tgz#51853da37be68a155cb6e827b3514a3c422e89cd"
-
->>>>>>> Added implementers
 throttleit@0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/throttleit/-/throttleit-0.0.2.tgz#cfedf88e60c00dd9697b61fdd2a8343a9b680eaf"
@@ -8354,11 +7893,7 @@ typescript-language-server@^0.1.14:
     vscode-languageserver "^3.4.3"
     vscode-uri "^1.0.1"
 
-<<<<<<< HEAD
 typescript@^2.7.2:
-=======
-typescript@latest:
->>>>>>> Added implementers
   version "2.9.2"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.9.2.tgz#1cbf61d05d6b96269244eb6a3bce4bd914e0f00c"
 
@@ -8674,15 +8209,9 @@ vscode-languageserver-types@3.5.0:
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/vscode-languageserver-types/-/vscode-languageserver-types-3.5.0.tgz#e48d79962f0b8e02de955e3f524908e2b19c0374"
 
-<<<<<<< HEAD
 vscode-languageserver-types@^3.10.0, vscode-languageserver-types@^3.2.0, vscode-languageserver-types@^3.6.1, vscode-languageserver-types@^3.7.0:
   version "3.10.0"
   resolved "https://registry.yarnpkg.com/vscode-languageserver-types/-/vscode-languageserver-types-3.10.0.tgz#944e5308f3b36a3f372c766f1a344e903ec9c389"
-=======
-vscode-languageserver-types@^3.2.0, vscode-languageserver-types@^3.6.1, vscode-languageserver-types@^3.7.0, vscode-languageserver-types@^3.8.1:
-  version "3.8.2"
-  resolved "https://registry.yarnpkg.com/vscode-languageserver-types/-/vscode-languageserver-types-3.8.2.tgz#2550b8d852195328a735c56dbf4e72b8da31613f"
->>>>>>> Added implementers
 
 vscode-languageserver@^3.4.3:
   version "3.5.1"
@@ -8701,13 +8230,10 @@ vscode-nsfw@^1.0.17:
     nan "^2.0.0"
     promisify-node "^0.3.0"
 
-<<<<<<< HEAD
 vscode-ripgrep@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/vscode-ripgrep/-/vscode-ripgrep-1.0.1.tgz#eff2f2b2a49921ac0acd3ff8dfecaaeebf0184cf"
 
-=======
->>>>>>> Added implementers
 vscode-uri@^1.0.0, vscode-uri@^1.0.1:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/vscode-uri/-/vscode-uri-1.0.5.tgz#3b899a8ef71c37f3054d79bdbdda31c7bf36f20d"
@@ -8776,7 +8302,6 @@ webpack-sources@^1.0.1, webpack-sources@^1.1.0:
     source-map "~0.6.1"
 
 webpack@^4.0.0:
-<<<<<<< HEAD
   version "4.16.3"
   resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.16.3.tgz#861be3176d81e7e3d71c66c8acc9bba35588b525"
   dependencies:
@@ -8785,27 +8310,13 @@ webpack@^4.0.0:
     "@webassemblyjs/wasm-edit" "1.5.13"
     "@webassemblyjs/wasm-opt" "1.5.13"
     "@webassemblyjs/wasm-parser" "1.5.13"
-=======
-  version "4.14.0"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.14.0.tgz#bbcc40dbf9a34129491b431574189d3802972243"
-  dependencies:
-    "@webassemblyjs/ast" "1.5.12"
-    "@webassemblyjs/helper-module-context" "1.5.12"
-    "@webassemblyjs/wasm-edit" "1.5.12"
-    "@webassemblyjs/wasm-opt" "1.5.12"
-    "@webassemblyjs/wasm-parser" "1.5.12"
->>>>>>> Added implementers
     acorn "^5.6.2"
     acorn-dynamic-import "^3.0.0"
     ajv "^6.1.0"
     ajv-keywords "^3.1.0"
     chrome-trace-event "^1.0.0"
     enhanced-resolve "^4.1.0"
-<<<<<<< HEAD
     eslint-scope "^4.0.0"
-=======
-    eslint-scope "^3.7.1"
->>>>>>> Added implementers
     json-parse-better-errors "^1.0.2"
     loader-runner "^2.3.0"
     loader-utils "^1.1.0"
@@ -9093,13 +8604,8 @@ yauzl@2.4.1:
     fd-slicer "~1.0.1"
 
 yeoman-environment@^2.0.0, yeoman-environment@^2.0.5:
-<<<<<<< HEAD
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/yeoman-environment/-/yeoman-environment-2.3.1.tgz#1aa00cc474a8e48518ab2b0f64b43034215e9997"
-=======
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/yeoman-environment/-/yeoman-environment-2.3.0.tgz#53ea899e50dd64c9510bc1b1c96a810582e42bdb"
->>>>>>> Added implementers
   dependencies:
     chalk "^2.1.0"
     cross-spawn "^6.0.5"
