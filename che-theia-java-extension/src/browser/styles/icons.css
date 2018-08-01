@@ -1,0 +1,59 @@
+/*
+ * Copyright (c) 2012-2018 Red Hat, Inc.
+ * This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which is available at http://www.eclipse.org/legal/epl-2.0.html
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *
+ * Contributors:
+ *   Red Hat, Inc. - initial API and implementation
+ */
+ 
+.java-libraries-icon {
+    background-repeat: no-repeat;
+    overflow: hidden;
+    min-width: 10px;
+    height: 10px;
+    margin-right: 4px;
+}
+
+.java-class-icon {
+    background-image: url(icons/class.svg) !important;
+}
+
+.java-externalLibraries-icon {
+    background-image: url(icons/externalLibraries.svg);
+}
+
+.java-file-icon {
+    background-image: url(icons/file.svg);
+}
+
+.java-folder-icon {
+    background-image: url(icons/folder.svg);
+}
+
+.java-jar-icon {
+    background-image: url(icons/jar.svg);
+}
+
+.java-package-icon {
+    background-image: url(icons/package.svg);
+}
+
+.java-enum-icon {
+    background-image: url(icons/enum.svg) !important;
+}
+
+.java-interface-icon {
+    background-image: url(icons/interface.svg) !important;
+}
+
+.java-method-icon {
+    background-image: url(icons/method.svg) !important;
+}
+
+.java-field-icon {
+    background-image: url(icons/field.svg) !important;
+}
