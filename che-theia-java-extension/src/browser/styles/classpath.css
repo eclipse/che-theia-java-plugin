@@ -1,0 +1,71 @@
+/*
+ * Copyright (c) 2012-2018 Red Hat, Inc.
+ * This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v2.0
+ * which is available at http://www.eclipse.org/legal/epl-2.0.html
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ *
+ * Contributors:
+ *   Red Hat, Inc. - initial API and implementation
+ */
+
+.classpath-panel {
+    padding-top: calc(var(--theia-ui-padding));
+}
+
+.classpath-panel-left {
+    flex: 1;
+    padding-right: calc(var(--theia-ui-padding));
+}
+
+.classpath-panel-right {
+    flex: 2;
+}
+
+.classpath-modal {
+    max-width: 650px;
+    width: 650px;
+}
+
+.classpath-content {
+    height: 420px;
+    overflow: hidden;
+    display: flex;
+}
+
+.classpath-widget {
+    height: 100%;
+}
+
+.classpath-button-right {
+    float: right;
+    width: 15%;
+    padding-top: 50px;
+    padding-right: 20px;
+}
+
+.classpath-tree-left {
+    width: 80%;
+    float: left;
+    height: 410px;
+}
+
+.classpath-button-done {
+    margin-top: calc(var(--theia-ui-padding)*2);
+}
+
+.classpath-view-title {
+    margin-left: calc(var(--theia-ui-padding)*3);
+}
+
+.source-widget .theia-TreeNode:hover .java-remove-node-icon, .library-widget .theia-TreeNode:hover .java-remove-node-icon {
+    display: block;
+}
+
+.dialogOverlay .classpath-widget :focus {
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
