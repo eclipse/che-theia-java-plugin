@@ -2,7 +2,7 @@
  * Copyright (c) 2012-2018 Red Hat, Inc.
  * This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
- * which is available at http://www.eclipse.org/legal/epl-2.0.html
+ * which is available at http://www.eclipse.org/legal/epl-2.0
  *
  * SPDX-License-Identifier: EPL-2.0
  *
@@ -10,16 +10,16 @@
  *   Red Hat, Inc. - initial API and implementation
  */
 
-import { inject, injectable } from "inversify";
-import { QuickOpenModel, QuickOpenItem, KeybindingRegistry, QuickOpenService, QuickOpenMode, KeybindingContribution } from "@theia/core/lib/browser";
-import { CommandRegistry, CommandContribution, CommandHandler, Command, MenuModelRegistry, MenuContribution } from "@theia/core";
-import { ILanguageClient, TextDocumentPositionParams, ExecuteCommandRequest, TextDocumentIdentifier, SymbolKind } from "@theia/languages/lib/browser";
-import { LanguageClientProvider } from "@theia/languages/lib/browser/language-client-provider";
-import { EditorManager, EDITOR_CONTEXT_MENU } from "@theia/editor/lib/browser";
-import { FIND_IMPLEMENTERS_COMMAND } from "../che-ls-jdt-commands";
-import URI from "@theia/core/lib/common/uri";
+import { inject, injectable } from 'inversify';
+import { QuickOpenModel, QuickOpenItem, KeybindingRegistry, QuickOpenService, QuickOpenMode, KeybindingContribution } from '@theia/core/lib/browser';
+import { CommandRegistry, CommandContribution, CommandHandler, Command, MenuModelRegistry, MenuContribution } from '@theia/core';
+import { ILanguageClient, TextDocumentPositionParams, ExecuteCommandRequest, TextDocumentIdentifier, SymbolKind } from '@theia/languages/lib/browser';
+import { LanguageClientProvider } from '@theia/languages/lib/browser/language-client-provider';
+import { EditorManager, EDITOR_CONTEXT_MENU } from '@theia/editor/lib/browser';
+import { FIND_IMPLEMENTERS_COMMAND } from '../che-ls-jdt-commands';
+import URI from '@theia/core/lib/common/uri';
 import { Range } from 'vscode-languageserver-types';
-import { JavaKeybindingContexts } from "../java-keybinding-contexts";
+import { JavaKeybindingContexts } from '../java-keybinding-contexts';
 
 export interface Implementers {
     searchedElement: string,
@@ -69,13 +69,10 @@ export class FindImplementers implements QuickOpenModel, CommandContribution, Ke
             }
 
             this.items = [];
-            for (const implItem of implementersResponse.implementers) {
-                const item = implItem as ImplementationItem;
-                this.items.push(new ImplementerQuickOpenItem(item.name, item.kind, item.location, this.editorManager));
-            }
+            implementersResponse.implementers.map((item: ImplementationItem) => this.items.push(new ImplementerQuickOpenItem(item.name, item.kind, item.location, this.editorManager)));
 
-            const itemNotFoundMessage = "Found 0 implementations"; 
-            const itemFoundMessage = "Found " + implementersResponse.implementers.length + " implementation(s) for " + implementersResponse.searchedElement
+            const itemNotFoundMessage = 'Found 0 implementations'; 
+            const itemFoundMessage = `Found ${implementersResponse.implementers.length} implementation(s) for ${implementersResponse.searchedElement}`; 
             this.quickOpenService.open(this, {
                 placeholder: this.items.length > 0 ? itemFoundMessage : itemNotFoundMessage
             });
@@ -88,7 +85,7 @@ export class FindImplementers implements QuickOpenModel, CommandContribution, Ke
     }
 
     isVisible(): boolean {
-        return !!this.editorManager.currentEditor;
+        return this.isEnabled();
     }
 
     registerKeybindings(keybindings: KeybindingRegistry): void {
