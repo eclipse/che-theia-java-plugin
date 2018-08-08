@@ -21,6 +21,7 @@ import { KeybindingContribution, KeybindingContext } from '@theia/core/lib/brows
 
 import "../../src/browser/styles/icons.css";
 import { FileStructure } from './navigation/file-structure';
+import { FindImplementers } from './navigation/find-implementers';
 import { JavaEditorTextFocusContext } from './java-keybinding-contexts';
 
 export default new ContainerModule((bind) => {
@@ -34,5 +35,11 @@ export default new ContainerModule((bind) => {
     bind(KeybindingContribution).toDynamicValue(ctx => ctx.container.get(FileStructure));
     bind(MenuContribution).toDynamicValue(ctx => ctx.container.get(FileStructure));
 
+    bind(FindImplementers).toSelf().inSingletonScope();
+    bind(CommandContribution).toDynamicValue(ctx => ctx.container.get(FindImplementers));
+    bind(KeybindingContribution).toDynamicValue(ctx => ctx.container.get(FindImplementers));
+    bind(MenuContribution).toDynamicValue(ctx => ctx.container.get(FindImplementers));
+
     bind(KeybindingContext).to(JavaEditorTextFocusContext).inSingletonScope();
+
 });
