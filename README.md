@@ -34,4 +34,4 @@ keybindings.registerKeybinding({
 ```
 
 ## License
-[Apache-2.0](https://github.com/theia-ide/theia/blob/master/LICENSE)
+It is open sourced under the Eclipse Public License 2.0.
