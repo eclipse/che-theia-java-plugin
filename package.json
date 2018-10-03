@@ -3,10 +3,13 @@
   "scripts": {
     "prepare": "lerna run prepare",
     "rebuild:browser": "theia rebuild:browser",
-    "rebuild:electron": "theia rebuild:electron"
+    "rebuild:electron": "theia rebuild:electron",
+    "tslint-fix": "tslint --fix --project che-theia-java-extension",
+    "tslint": "tslint --project che-theia-java-extension"
   },
   "devDependencies": {
-    "lerna": "2.4.0"
+    "lerna": "2.4.0",
+    "tslint": "5.10.0"
   },
   "workspaces": [
     "che-theia-java-extension", 

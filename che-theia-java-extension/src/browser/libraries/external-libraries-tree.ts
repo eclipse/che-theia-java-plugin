@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2018 Red Hat, Inc.
+ * Copyright (c) 2018 Red Hat, Inc.
  * This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which is available at http://www.eclipse.org/legal/epl-2.0.html
@@ -14,9 +14,9 @@ import { injectable, inject } from 'inversify';
 import { CompositeTreeNode, TreeNode, SelectableTreeNode, ExpandableTreeNode } from '@theia/core/lib/browser';
 import { LanguageClientProvider } from '@theia/languages/lib/browser/language-client-provider';
 import { ExecuteCommandRequest } from 'monaco-languageclient/lib';
-import { ILanguageClient } from '@theia/languages/lib/common';
 import { GET_EXTERNAL_LIBRARIES_COMMAND, GET_LIBRARY_CHILDREN_COMMAND, GET_EXTERNAL_LIBRARIES_CHILDREN_COMMAND } from '../che-ls-jdt-commands';
 import { FileNavigatorTree } from '@theia/navigator/lib/browser/navigator-tree';
+import { ILanguageClient } from '@theia/languages/lib/browser';
 
 @injectable()
 export class ExternalLibrariesTree extends FileNavigatorTree {
@@ -26,23 +26,24 @@ export class ExternalLibrariesTree extends FileNavigatorTree {
 
     async resolveChildren(parent: CompositeTreeNode): Promise<TreeNode[]> {
 
-        if (!parent.parent) {
+        if (this.root && parent.parent && this.root.id === parent.parent.id) {
             return super.resolveChildren(parent).then((nodes) => {
-                let isJavaProject = nodes.filter(node => node.id.endsWith("pom.xml") || node.id.endsWith(".gradle")).length >= 1;
+                const isJavaProject = nodes.filter(node => node.id.endsWith("pom.xml") || node.id.endsWith(".gradle")).length >= 1;
                 if (isJavaProject) {
-                    const libNode = LibraryNode.create(parent.id, parent);
+                    const fixParentID = parent.id.startsWith("/") ? "file://" + parent.id : parent.id;
+                    const libNode = LibraryNode.create(fixParentID, parent);
                     super.addNode(libNode);
                     return nodes.concat([libNode]);
                 }
                 return nodes;
             });
-            
         }
 
-        if(isJavaNode(parent) && !JarFileNode.is(parent)) {
+        if (isJavaNode(parent) && !JarFileNode.is(parent)) {
+
             const javaClient = await this.languageClientProvider.getLanguageClient("java");
 
-            if(!javaClient) {
+            if (!javaClient) {
                 return Promise.resolve([]);
             }
 
@@ -99,7 +100,7 @@ export namespace LibraryNode {
     }
 
     export function create(projectURI: string, parent?: TreeNode): LibraryNode {
-        const id = "LibraryNode"+projectURI;
+        const id = "LibraryNode" + projectURI;
         return <LibraryNode>{
             id,
             name: "External Libraries",

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2018 Red Hat, Inc.
+ * Copyright (c) 2018 Red Hat, Inc.
  * This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which is available at http://www.eclipse.org/legal/epl-2.0.html
@@ -17,8 +17,6 @@ import { WorkspaceService } from '@theia/workspace/lib/browser';
 import { ApplicationShell } from '@theia/core/lib/browser/shell/application-shell';
 import { FileSystem } from '@theia/filesystem/lib/common/filesystem';
 import { EditorManager } from '@theia/editor/lib/browser';
-import { FileNavigatorSearch } from '@theia/navigator/lib/browser/navigator-search';
-import { SearchBoxFactory } from '@theia/navigator/lib/browser/search-box';
 import { FileNavigatorWidget } from '@theia/navigator/lib/browser';
 import { ExternalLibraryModel } from './external-libraries-model';
 import * as React from "react";
@@ -41,11 +39,9 @@ export class ExternalLibrariesWidget extends FileNavigatorWidget {
         @inject(FileSystem) protected readonly fileSystem: FileSystem,
         @inject(ExternalLibraryModel) readonly model: ExternalLibraryModel,
         @inject(WidgetManager) protected readonly widget: WidgetManager,
-        @inject(EditorManager) protected readonly editorManager: EditorManager,
-        @inject(FileNavigatorSearch) protected readonly navigatorSearch: FileNavigatorSearch,
-        @inject(SearchBoxFactory) protected readonly searchBoxFactory: SearchBoxFactory
+        @inject(EditorManager) protected readonly editorManager: EditorManager
     ) {
-        super(props, model, contextMenuRenderer, commandService, selectionService, workspaceService, labelProvider, navigatorSearch, searchBoxFactory, shell, fileSystem);
+        super(props, model, contextMenuRenderer, commandService, selectionService, workspaceService, shell, fileSystem);
         this.id = EXTERNAL_LIBRARIES_ID;
         this.title.label = LABEL;
         this.addClass(CLASS);

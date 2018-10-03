@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2018 Red Hat, Inc.
+ * Copyright (c) 2018 Red Hat, Inc.
  * This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which is available at http://www.eclipse.org/legal/epl-2.0.html
@@ -16,7 +16,6 @@ import { createFileTreeContainer, FileTreeModel, FileTree } from '@theia/filesys
 import { ExternalLibrariesWidget } from './external-libraries-widget';
 import { NavigatorDecoratorService, NavigatorTreeDecorator } from '@theia/navigator/lib/browser';
 import { bindContributionProvider } from '@theia/core';
-import { FileNavigatorSearch } from '@theia/navigator/lib/browser/navigator-search';
 import { FileNavigatorTree } from '@theia/navigator/lib/browser/navigator-tree';
 import { ExternalLibrariesTree } from './external-libraries-tree';
 import { ExternalLibraryModel } from './external-libraries-model';
@@ -46,9 +45,6 @@ export function createExternalLibrariesContainer(parent: interfaces.Container): 
     child.bind(NavigatorDecoratorService).toSelf().inSingletonScope();
     child.rebind(TreeDecoratorService).toDynamicValue(ctx => ctx.container.get(NavigatorDecoratorService)).inSingletonScope();
     bindContributionProvider(child, NavigatorTreeDecorator);
-
-    child.bind(FileNavigatorSearch).toSelf().inSingletonScope();
-    child.bind(NavigatorTreeDecorator).toService(FileNavigatorSearch);
 
     return child;
 }

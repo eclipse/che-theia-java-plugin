@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2018 Red Hat, Inc.
+ * Copyright (c) 2018 Red Hat, Inc.
  * This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which is available at http://www.eclipse.org/legal/epl-2.0.html
@@ -18,7 +18,7 @@ import {
 } from "@theia/core/lib/common";
 
 import { ContainerModule } from 'inversify';
-import { KeybindingContribution, KeybindingContext } from '@theia/core/lib/browser';
+import { KeybindingContribution, KeybindingContext, WidgetFactory} from '@theia/core/lib/browser';
 
 import '../../src/browser/styles/icons.css';
 import { FileStructure } from './navigation/file-structure';
@@ -29,7 +29,7 @@ import { createExternalLibrariesWidget } from './libraries/external-libraries-co
 import { CheLibResourceResolver } from './libraries/chelib-resource-provider';
 import { FileNavigatorWidget } from '@theia/navigator/lib/browser';
 
-import "../../src/browser/styles/icons.css";
+import '../../src/browser/styles/icons.css';
 import { FindImplementers } from './navigation/find-implementers';
 
 export default new ContainerModule((bind, unbind, isBound) => {
@@ -54,10 +54,10 @@ export default new ContainerModule((bind, unbind, isBound) => {
 
     if (isBound(FileNavigatorWidget)) {
         unbind(FileNavigatorWidget);
-    }   
+    }
 
     bind(ExternalLibrariesWidget).toDynamicValue(ctx => {
-        return createExternalLibrariesWidget(ctx.container)
+        return createExternalLibrariesWidget(ctx.container);
     });
 
     bind(WidgetFactory).toDynamicValue(context => ({
