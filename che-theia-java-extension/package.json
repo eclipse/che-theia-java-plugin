@@ -25,11 +25,13 @@
     "prepare": "yarn run clean && yarn run build",
     "clean": "rimraf lib",
     "build": "tsc",
+    "postinstall": "node ./scripts/get-extension.js",
     "watch": "tsc -w"
   },
   "theiaExtensions": [
     {
-      "frontend": "lib/browser/che-theia-java-frontend-module"
+      "frontend": "lib/browser/che-theia-java-frontend-module",
+      "backend": "lib/node/java-backend-module"
     }
   ]
 }
