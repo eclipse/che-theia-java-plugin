@@ -10,9 +10,9 @@
  *   Red Hat, Inc. - initial API and implementation
  */
 
-import { injectable } from "inversify";
-import { CommandContribution, CommandRegistry, MenuContribution, MenuModelRegistry } from "@theia/core/lib/common";
-import { KeybindingContribution, KeybindingRegistry } from "@theia/core/lib/browser";
+import { injectable } from 'inversify';
+import { CommandContribution, CommandRegistry, MenuContribution, MenuModelRegistry } from '@theia/core/lib/common';
+import { KeybindingContribution, KeybindingRegistry } from '@theia/core/lib/browser';
 
 @injectable()
 export class JavaExtensionContribution implements CommandContribution, MenuContribution, KeybindingContribution {

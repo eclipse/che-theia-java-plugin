@@ -56,7 +56,7 @@ export class FindImplementers implements QuickOpenModel, CommandContribution, Ke
     }
 
     async execute() {
-        const client = await this.languageClientProvider.getLanguageClient("java");
+        const client = await this.languageClientProvider.getLanguageClient('java');
         if (client) {
             const implementersResponse = await this.doRequestToimplementers(client);
 
@@ -91,7 +91,7 @@ export class FindImplementers implements QuickOpenModel, CommandContribution, Ke
     registerKeybindings(keybindings: KeybindingRegistry): void {
         keybindings.registerKeybinding({
             command: this.command.id,
-            keybinding: "ctrlcmd+alt+b",
+            keybinding: 'ctrlcmd+alt+b',
             context: JavaKeybindingContexts.javaEditorTextFocus
         });
     }
@@ -103,7 +103,7 @@ export class FindImplementers implements QuickOpenModel, CommandContribution, Ke
     registerMenus(menus: MenuModelRegistry): void {
         menus.registerMenuAction([...EDITOR_CONTEXT_MENU, 'navigation'], {
             commandId: this.command.id,
-            label: "Open Implementation(s)"
+            label: 'Open Implementation(s)'
         });
     }
 
@@ -135,8 +135,8 @@ export class FindImplementers implements QuickOpenModel, CommandContribution, Ke
         }
 
         return {
-            "searchedElement": "",
-            "implementers": []
+            'searchedElement': '',
+            'implementers': []
         };
     }
 
@@ -175,13 +175,13 @@ export class ImplementerQuickOpenItem extends QuickOpenItem {
     getIconClass() {
         switch (this.kind) {
             case SymbolKind.Interface: {
-                return "java-interface-icon file-icon";
+                return 'java-interface-icon file-icon';
             }
             case SymbolKind.Enum: {
-                return "java-enum-icon file-icon";
+                return 'java-enum-icon file-icon';
             }
             default:
-                return "java-class-icon file-icon";
+                return 'java-class-icon file-icon';
         }
     }
 
