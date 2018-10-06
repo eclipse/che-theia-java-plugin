@@ -27,7 +27,7 @@ const downloadPath = path.join(packagePath, downloadDir);
 const archiveExtensionCorePath = path.join(downloadPath, archiveExtensionCoreName);
 const archiveExtensionAPIPath = path.join(downloadPath, archiveExtensionAPIName);
 
-function getDevServer() {
+function getExtension() {
     return new Promise((resolve, reject) => {
         const command = 'mvn dependency:copy ';
         console.log('executing ' + command);
@@ -42,4 +42,4 @@ function getDevServer() {
     });
 }
 
-getDevServer();
+getExtension();
