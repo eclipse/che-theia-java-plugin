@@ -19,13 +19,12 @@
   },
   "devDependencies": {
     "rimraf": "2.6.2",
-    "typescript": "2.9.2"
+    "typescript": "^2.9.2"
   },
   "scripts": {
     "prepare": "yarn run clean && yarn run build",
     "clean": "rimraf lib",
-    "build": "tsc",
-    "postinstall": "node ./scripts/get-extension.js",
+    "build": "tsc && node ./scripts/get-extension.js",
     "watch": "tsc -w"
   },
   "theiaExtensions": [
@@ -33,5 +32,8 @@
       "frontend": "lib/browser/che-theia-java-frontend-module",
       "backend": "lib/node/java-backend-module"
     }
-  ]
+  ],
+  "bundle" : {
+    "version": "0.0.1-SNAPSHOT"
+  }
 }

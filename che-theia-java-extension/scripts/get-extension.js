@@ -13,9 +13,10 @@
 const fs = require('fs');
 const process = require('child_process');
 const path = require('path');
+const package = require('../package.json');
 
 const packagePath = path.join(__dirname, '..');
-const version = '0.0.1-SNAPSHOT';
+const version = package.bundle.version;
 const archiveExtensionCoreName = `jdt.ls.extension.core-${version}.jar`;
 const archiveExtensionAPIName = `jdt.ls.extension.api-${version}.jar`;
 const downloadDir = 'download';

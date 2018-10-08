@@ -18,6 +18,9 @@
 	<groupId>theia</groupId>
 	<artifactId>java.package</artifactId>
 	<version>3.1.0</version>
+	<properties>
+        <che.ls.jdt.version>0.0.1-SNAPSHOT</che.ls.jdt.version>
+    </properties>
 	<build>
 		<plugins>
 			<plugin>
@@ -29,7 +32,7 @@
 						<artifactItem>
 							<groupId>org.eclipse.che.ls.jdt</groupId>
 							<artifactId>jdt.ls.extension.core</artifactId>
-							<version>0.0.1-SNAPSHOT</version>
+							<version>${che.ls.jdt.version}</version>
 							<type>jar</type>
 							<overWrite>true</overWrite>
 							<outputDirectory>../download</outputDirectory>
@@ -37,7 +40,7 @@
 						<artifactItem>
 							<groupId>org.eclipse.che.ls.jdt</groupId>
 							<artifactId>jdt.ls.extension.api</artifactId>
-							<version>0.0.1-SNAPSHOT</version>
+							<version>${che.ls.jdt.version}</version>
 							<type>jar</type>
 							<overWrite>true</overWrite>
 							<outputDirectory>../download</outputDirectory>

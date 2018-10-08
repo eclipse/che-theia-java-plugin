@@ -10,13 +10,13 @@
  *   Red Hat, Inc. - initial API and implementation
  */
 
-import { inject, injectable } from 'inversify';
-import { QuickOpenModel, QuickOpenItem, KeybindingRegistry, Keybinding, QuickOpenService, QuickOpenMode, KeybindingContribution } from '@theia/core/lib/browser';
-import { CommandRegistry, CommandContribution, Command, MenuModelRegistry, MenuContribution } from '@theia/core';
-import { ILanguageClient, ExecuteCommandRequest, SymbolKind } from '@theia/languages/lib/browser';
-import { LanguageClientProvider } from '@theia/languages/lib/browser/language-client-provider';
-import { EditorManager, EDITOR_CONTEXT_MENU } from '@theia/editor/lib/browser';
-import { FILE_STRUCTURE_COMMAND } from '../che-ls-jdt-commands';
+import { inject, injectable } from "inversify";
+import { QuickOpenModel, QuickOpenItem, KeybindingRegistry, Keybinding, QuickOpenService, QuickOpenMode, KeybindingContribution } from "@theia/core/lib/browser";
+import { CommandRegistry, CommandContribution, Command, MenuModelRegistry, MenuContribution } from "@theia/core";
+import { ILanguageClient, ExecuteCommandRequest, SymbolKind } from "@theia/languages/lib/browser";
+import { LanguageClientProvider } from "@theia/languages/lib/browser/language-client-provider";
+import { EditorManager, EDITOR_CONTEXT_MENU } from "@theia/editor/lib/browser";
+import { FILE_STRUCTURE_COMMAND } from "../che-ls-jdt-commands";
 import URI from '@theia/core/lib/common/uri';
 import { Range } from 'vscode-languageserver-types';
 
@@ -66,7 +66,7 @@ export class FileStructure implements QuickOpenModel, CommandContribution, Keybi
     /**
      * The current lookFor string input by the user.
      */
-    protected currentLookFor: string = '';
+    protected currentLookFor: string = "";
 
     private items!: QuickOpenItem[];
     private command: Command = {
@@ -77,10 +77,12 @@ export class FileStructure implements QuickOpenModel, CommandContribution, Keybi
     constructor(
         @inject(CommandRegistry) protected readonly commands: CommandRegistry,
         @inject(KeybindingRegistry) protected readonly keybindingRegistry: KeybindingRegistry,
+        @inject(KeybindingRegistry) protected readonly keybindings: KeybindingRegistry,
         @inject(QuickOpenService) protected readonly quickOpenService: QuickOpenService,
         @inject(LanguageClientProvider) protected readonly languageClientProvider: LanguageClientProvider,
         @inject(EditorManager) protected readonly editorManager: EditorManager
-    ) {}
+    ) {
+    }
 
     async open() {
         // Triggering the keyboard shortcut while the dialog is open toggles
@@ -92,14 +94,14 @@ export class FileStructure implements QuickOpenModel, CommandContribution, Keybi
             this.isOpen = true;
         }
 
-        let placeholderText = 'File Structure.';
+        let placeholderText = "File Structure.";
         const keybinding = this.getKeyCommand();
         const showOrHide = this.showInheritedMembers ? 'hide' : 'show';
         if (keybinding) {
             placeholderText += ` (Press ${keybinding} to ${showOrHide} inherited members)`;
         }
 
-        const client = await this.languageClientProvider.getLanguageClient('java');
+        const client = await this.languageClientProvider.getLanguageClient("java");
         if (client) {
             const fileStructureResponse = await this.doRequestToStructure(client);
 
@@ -113,7 +115,7 @@ export class FileStructure implements QuickOpenModel, CommandContribution, Keybi
                 placeholder: placeholderText,
                 onClose: () => {
                     this.isOpen = false;
-                    this.currentLookFor = '';
+                    this.currentLookFor = "";
                 },
             });
         }
@@ -159,7 +161,7 @@ export class FileStructure implements QuickOpenModel, CommandContribution, Keybi
     registerKeybindings(keybindings: KeybindingRegistry): void {
         keybindings.registerKeybinding({
             command: this.command.id,
-            keybinding: 'ctrlcmd+alt+m'
+            keybinding: "ctrlcmd+alt+o"
         });
     }
 
@@ -173,7 +175,7 @@ export class FileStructure implements QuickOpenModel, CommandContribution, Keybi
     registerMenus(menus: MenuModelRegistry): void {
         menus.registerMenuAction([...EDITOR_CONTEXT_MENU, 'navigation'], {
             commandId: this.command.id,
-            label: 'Navigate File Structure'
+            label: "Navigate File Structure"
         });
     }
 
@@ -227,25 +229,25 @@ export class MemberQuickOpenItem extends QuickOpenItem {
     }
 
     getDescription(): string {
-        return '';
+        return "";
     }
 
     getIconClass() {
         switch (this.kind) {
             case SymbolKind.Interface: {
-                return 'java-interface-icon file-icon';
+                return "java-interface-icon file-icon";
             }
             case SymbolKind.Enum: {
-                return 'java-enum-icon file-icon';
+                return "java-enum-icon file-icon";
             }
             case SymbolKind.Field: {
-                return 'java-field-icon file-icon';
+                return "java-field-icon file-icon";
             }
             case SymbolKind.Method: {
-                return 'java-method-icon file-icon';
+                return "java-method-icon file-icon";
             }
             default:
-                return 'java-class-icon file-icon';
+                return "java-class-icon file-icon";
         }
     }
 
