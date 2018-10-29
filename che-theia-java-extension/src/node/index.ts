@@ -9,3 +9,5 @@
  * Contributors:
  *   Red Hat, Inc. - initial API and implementation
  */
+
+export * from './java-backend-module';
