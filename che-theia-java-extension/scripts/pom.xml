@@ -19,7 +19,7 @@
 	<artifactId>java.package</artifactId>
 	<version>3.1.0</version>
 	<properties>
-        <che.ls.jdt.version>0.0.1-SNAPSHOT</che.ls.jdt.version>
+        <che.ls.jdt.version>0.0.2-SNAPSHOT</che.ls.jdt.version>
     </properties>
 	<build>
 		<plugins>
