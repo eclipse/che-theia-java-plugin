@@ -16,10 +16,10 @@ import {
     MenuContribution
 } from "@theia/core/lib/common";
 
-import { ContainerModule } from "inversify";
+import { ContainerModule } from 'inversify';
 import { KeybindingContribution, KeybindingContext } from '@theia/core/lib/browser';
 
-import "../../src/browser/styles/icons.css";
+import '../../src/browser/styles/icons.css';
 import { FileStructure } from './navigation/file-structure';
 import { FindImplementers } from './navigation/find-implementers';
 import { JavaEditorTextFocusContext } from './java-keybinding-contexts';
