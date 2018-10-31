@@ -9,13 +9,13 @@
     "src"
   ],
   "dependencies": {
-    "@theia/core": "0.3.15",
-    "@theia/java": "0.3.15",
-    "@theia/editor": "0.3.15",
-    "@theia/languages": "0.3.15",
-    "@theia/filesystem": "0.3.15",
-    "@theia/navigator": "0.3.15",
-    "@theia/workspace": "0.3.15"
+    "@theia/core": "0.3.16",
+    "@theia/java": "0.3.16",
+    "@theia/editor": "0.3.16",
+    "@theia/languages": "0.3.16",
+    "@theia/filesystem": "0.3.16",
+    "@theia/navigator": "0.3.16",
+    "@theia/workspace": "0.3.16"
   },
   "devDependencies": {
     "rimraf": "2.6.2",
@@ -34,6 +34,6 @@
     }
   ],
   "bundle" : {
-    "version": "0.0.1-SNAPSHOT"
+    "version": "0.0.2-SNAPSHOT"
   }
 }
