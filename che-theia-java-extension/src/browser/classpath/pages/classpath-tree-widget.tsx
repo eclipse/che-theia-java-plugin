@@ -58,9 +58,9 @@ export abstract class AbstractClasspathTreeWidget extends TreeWidget {
                 width={this.node.offsetWidth * 0.8}
                 height={this.node.offsetHeight * 0.8}
                 rows={Array.from(this.rows.values())}
-                getNodeRowHeight={this.getNodeRowHeight}
                 renderNodeRow={this.renderNodeRow}
                 scrollToRow={this.scrollToRow}
+                handleScroll={this.handleScroll}
             />;
         }
         return null;
