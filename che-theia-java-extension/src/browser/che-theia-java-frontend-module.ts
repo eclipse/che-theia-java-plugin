@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2018 Red Hat, Inc.
+ * Copyright (c) 2018 Red Hat, Inc.
  * This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which is available at http://www.eclipse.org/legal/epl-2.0.html
@@ -13,19 +13,26 @@
 import { JavaExtensionContribution } from './che-theia-java-contribution';
 import {
     CommandContribution,
-    MenuContribution
+    MenuContribution,
+    ResourceResolver
 } from "@theia/core/lib/common";
 
 import { ContainerModule } from 'inversify';
-import { KeybindingContribution, KeybindingContext } from '@theia/core/lib/browser';
+import { KeybindingContribution, KeybindingContext, WidgetFactory} from '@theia/core/lib/browser';
 
 import '../../src/browser/styles/icons.css';
 import { FileStructure } from './navigation/file-structure';
-import { FindImplementers } from './navigation/find-implementers';
 import { JavaEditorTextFocusContext } from './java-keybinding-contexts';
 
-export default new ContainerModule((bind) => {
+import { ExternalLibrariesWidget, EXTERNAL_LIBRARIES_ID } from './libraries/external-libraries-widget';
+import { createExternalLibrariesWidget } from './libraries/external-libraries-container';
+import { CheLibResourceResolver } from './libraries/chelib-resource-provider';
+import { FileNavigatorWidget } from '@theia/navigator/lib/browser';
 
+import '../../src/browser/styles/icons.css';
+import { FindImplementers } from './navigation/find-implementers';
+
+export default new ContainerModule((bind, unbind, isBound) => {
     bind(CommandContribution).to(JavaExtensionContribution);
     bind(MenuContribution).to(JavaExtensionContribution);
     bind(KeybindingContribution).to(JavaExtensionContribution);
@@ -42,4 +49,19 @@ export default new ContainerModule((bind) => {
 
     bind(KeybindingContext).to(JavaEditorTextFocusContext).inSingletonScope();
 
+    bind(CheLibResourceResolver).toSelf().inSingletonScope();
+    bind(ResourceResolver).toDynamicValue(ctx => ctx.container.get(CheLibResourceResolver));
+
+    if (isBound(FileNavigatorWidget)) {
+        unbind(FileNavigatorWidget);
+    }
+
+    bind(ExternalLibrariesWidget).toDynamicValue(ctx => {
+        return createExternalLibrariesWidget(ctx.container);
+    });
+
+    bind(WidgetFactory).toDynamicValue(context => ({
+        id: EXTERNAL_LIBRARIES_ID,
+        createWidget: () => context.container.get<ExternalLibrariesWidget>(ExternalLibrariesWidget)
+    }));
 });

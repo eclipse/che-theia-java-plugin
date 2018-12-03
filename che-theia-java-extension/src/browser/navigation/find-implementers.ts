@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2018 Red Hat, Inc.
+ * Copyright (c) 2018 Red Hat, Inc.
  * This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
  * which is available at http://www.eclipse.org/legal/epl-2.0
@@ -45,14 +45,14 @@ export class FindImplementers implements QuickOpenModel, CommandContribution, Ke
         id: 'java.command.implementation',
         label: 'Java: Open Implementation(s)'
     };
-    
+
     constructor(
         @inject(CommandRegistry) protected readonly commands: CommandRegistry,
         @inject(KeybindingRegistry) protected readonly keybindings: KeybindingRegistry,
         @inject(QuickOpenService) protected readonly quickOpenService: QuickOpenService,
         @inject(LanguageClientProvider) protected readonly languageClientProvider: LanguageClientProvider,
         @inject(EditorManager) protected readonly editorManager: EditorManager
-    ) { 
+    ) {
     }
 
     async execute() {
@@ -69,17 +69,18 @@ export class FindImplementers implements QuickOpenModel, CommandContribution, Ke
             }
 
             this.items = [];
-            implementersResponse.implementers.map((item: ImplementationItem) => this.items.push(new ImplementerQuickOpenItem(item.name, item.kind, item.location, this.editorManager)));
+            implementersResponse.implementers.map((item: ImplementationItem) =>
+                this.items.push(new ImplementerQuickOpenItem(item.name, item.kind, item.location, this.editorManager)));
 
-            const itemNotFoundMessage = 'Found 0 implementations'; 
-            const itemFoundMessage = `Found ${implementersResponse.implementers.length} implementation(s) for ${implementersResponse.searchedElement}`; 
+            const itemNotFoundMessage = 'Found 0 implementations';
+            const itemFoundMessage = `Found ${implementersResponse.implementers.length} implementation(s) for ${implementersResponse.searchedElement}`;
             this.quickOpenService.open(this, {
                 placeholder: this.items.length > 0 ? itemFoundMessage : itemNotFoundMessage
             });
         }
-        
+
     }
-    
+
     isEnabled(): boolean {
         return !!this.editorManager.currentEditor;
     }
