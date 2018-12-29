@@ -53,18 +53,16 @@ export class UnmarkDirAsSourceAction implements CommandContribution, MenuContrib
             execute: async fileUri => {
                 const fileWidget = await this.widgetManager.tryGetWidget(FILE_NAVIGATOR_ID) as FileNavigatorWidget;
                 if (fileWidget) {
-                    
                     const roots = await this.workspaceService.roots;
                     const root = JavaUtils.getRootProjectURI(roots, fileUri.toString());
                     if (roots && root) {
                         const multiRootURI = JavaUtils.getMultiRootReadyURI(root, fileUri.toString());
                         const treeNode = fileWidget.model.getNode(multiRootURI);
                         if (treeNode && CompositeTreeNode.is(treeNode)) {
-                            this.performAction(root, treeNode.id);   
+                            this.performAction(root, treeNode.id);
                         }
                     }
                 }
-                
             }
         }));
     }

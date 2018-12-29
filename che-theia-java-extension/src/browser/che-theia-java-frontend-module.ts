@@ -18,7 +18,8 @@ import {
 } from "@theia/core/lib/common";
 
 import { ContainerModule, Container, interfaces } from "inversify";
-import { KeybindingContribution, KeybindingContext, WidgetFactory, TreeProps, createTreeContainer, defaultTreeProps, TreeWidget, TreeModelImpl, TreeModel } from '@theia/core/lib/browser';
+import { KeybindingContribution, KeybindingContext, WidgetFactory, TreeProps, createTreeContainer,
+    defaultTreeProps, TreeWidget, TreeModelImpl, TreeModel } from '@theia/core/lib/browser';
 
 import "../../src/browser/styles/icons.css";
 import "../../src/browser/styles/classpath.css";

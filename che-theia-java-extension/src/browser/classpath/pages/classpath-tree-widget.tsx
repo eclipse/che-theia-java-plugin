@@ -21,7 +21,7 @@ import { ClasspathContainer, ClasspathEntry, ClasspathEntryKind } from '../class
 import { FileStat } from '@theia/filesystem/lib/common';
 import { ClasspathViewNode } from '../nodes/classpath-node';
 
-export interface extendedDialogProps {
+export interface ExtendedDialogProps {
     entryKindOnAdded: ClasspathEntryKind
 }
 
@@ -33,7 +33,7 @@ export abstract class AbstractClasspathTreeWidget extends TreeWidget {
 
     classpathModel: IClasspathModel;
     activeFileStat: FileStat | undefined;
-    fileDialogProps!: OpenFileDialogProps & extendedDialogProps;
+    fileDialogProps!: OpenFileDialogProps & ExtendedDialogProps;
 
     constructor(
         @inject(TreeProps) readonly props: TreeProps,
@@ -72,7 +72,8 @@ export abstract class AbstractClasspathTreeWidget extends TreeWidget {
 
     protected renderTailDecorations(node: TreeNode, props: NodeProps): React.ReactNode {
         const c = node as ClasspathViewNode;
-        if ((c.parent && c.parent.id === ClasspathRootID && c.classpathEntry.entryKind === ClasspathEntryKind.LIBRARY) || c.classpathEntry.entryKind === ClasspathEntryKind.SOURCE) {
+        if ((c.parent && c.parent.id === ClasspathRootID && c.classpathEntry.entryKind === ClasspathEntryKind.LIBRARY) ||
+            c.classpathEntry.entryKind === ClasspathEntryKind.SOURCE) {
             return <div className={ClasspathTreeWidget.Styles.CLASSPATHTREEWIDGET_REMOVE_ICON} onClick={() => this.removeNode(node)}></div>;
         }
         return super.renderTailDecorations(node, props);
@@ -83,7 +84,7 @@ export abstract class AbstractClasspathTreeWidget extends TreeWidget {
         this.classpathModel.removeClasspathNode(classpathViewNode.classpathEntry.path);
         this.classpathContainer.removeClasspathEntry(classpathViewNode.classpathEntry);
     }
-    
+
     async openDialog() {
         if (this.activeFileStat) {
             const rootNode = DirNode.createRoot(this.activeFileStat, this.labelProvider.getName(this.activeFileStat), this.activeFileStat.uri);
@@ -107,7 +108,6 @@ export abstract class AbstractClasspathTreeWidget extends TreeWidget {
     protected isValidOpenedNode(node: TreeNode): boolean {
         return false;
     }
-              
 }
 
 export namespace ClasspathTreeWidget {
