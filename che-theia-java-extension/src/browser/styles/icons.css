@@ -23,23 +23,27 @@
 }
 
 .java-externalLibraries-icon {
-    background-image: url(icons/externalLibraries.svg);
+    background-image: url(icons/externalLibraries.svg) !important;
 }
 
 .java-file-icon {
-    background-image: url(icons/file.svg);
+    background-image: url(icons/file.svg) !important;
 }
 
 .java-folder-icon {
-    background-image: url(icons/folder.svg);
+    background-image: url(icons/folder.svg) !important;
+}
+
+.java-source-folder-icon {
+    background-image: url(icons/source.svg) !important;
 }
 
 .java-jar-icon {
-    background-image: url(icons/jar.svg);
+    background-image: url(icons/jar.svg) !important;
 }
 
 .java-package-icon {
-    background-image: url(icons/package.svg);
+    background-image: url(icons/package.svg) !important;
 }
 
 .java-enum-icon {
@@ -56,4 +60,9 @@
 
 .java-field-icon {
     background-image: url(icons/field.svg) !important;
+}
+
+.java-remove-node-icon {
+    background-image: url(icons/remove-node.svg) !important;
+    display: none;
 }
